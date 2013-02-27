@@ -14,3 +14,7 @@ Prerequisites:
 Postinstall actions:
 
  - fix PATH to point to the newly compiled vim's /bin folder
+ - or just relink it in /usr/bin:
+   1. go to CYGWIN_HOME/usr/bin
+   2. del old vim link
+   3. ln -s /cygdrive/c/dev/vim/bin/vim vim
