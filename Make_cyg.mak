@@ -7,6 +7,7 @@
 # This compiles Vim as a Windows application.  If you want Vim to run as a
 # Cygwin application use the Makefile (just like on Unix).
 #
+# CLIPBOARD no or yes: *haha*, enables +clipboard and +xterm_clipboard
 # GUI		no or yes: set to yes if you want the GUI version (yes)
 # PERL		define to path to Perl dir to get Perl support (not defined)
 #   PERL_VER	  define to version of Perl being used (56)
@@ -60,12 +61,25 @@
 # NBDEBUG	no or yes: to include netbeans interface debugging support (no)
 # XPM		define to path to XPM dir to get XPM image support (not defined)
 #>>>>> choose options:
+
+############ SJAS START
+#ifndef CLIPBOARD
+#CLIPBOARD=yes
+#endif
+
+###############################
+#ifeq (yes, $(CLIPBOARD))
+#DEFINES += -DFEAT_CLIPBOARD
+#DEFINES += -DFEAT_XCLIPBOARD
+#endif
+############ SJAS END
+
 ifndef GUI
 GUI=yes
 endif
 
 ifndef FEATURES
-FEATURES = BIG
+FEATURES = HUGE
 endif
 
 ifndef GETTEXT
