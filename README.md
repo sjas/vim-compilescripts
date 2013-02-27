@@ -8,7 +8,7 @@ Currently for windows with cygwin containing my compileflags.
 Prerequisites:
 
  1. install cygwin
- 2. ... with ncurses
+ 2. ... with ncurses and some other stuff: http://stackoverflow.com/a/13641538/805284
  3. use c:/dev/vim folder for vim
  4. check script out into /vim/src
 
@@ -23,3 +23,6 @@ Postinstall actions:
    1. go to CYGWIN_HOME/usr/bin
    2. del old vim link
    3. ln -s /cygdrive/c/dev/vim/bin/vim vim
+
+NOTE:
+If clipboard support does not seem to work, check the ./configure log output, if it's missing the X11 headers.
