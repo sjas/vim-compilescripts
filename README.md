@@ -10,6 +10,11 @@ Prerequisites:
  1. install cygwin
  2. ... with ncurses
  3. use c:/dev/vim folder for vim
+ 4. check script out into /vim/src
+
+Usage:
+ - execute ./asdf.sh
+ - if this does not work, check user rights
 
 Postinstall actions:
 
